@@ -17,6 +17,11 @@ namespace WebsiteFO.Controllers
         {
             return View();
         }
+        [Route("Contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
