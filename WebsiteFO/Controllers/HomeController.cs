@@ -18,15 +18,23 @@ namespace WebsiteFO.Controllers
             return View();
         }
         [Route("Contact")]
+        [Route("Films")]
+        [Route("Location")]
         public IActionResult Contact()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Films()
         {
             return View();
         }
+
+        public IActionResult Location()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
