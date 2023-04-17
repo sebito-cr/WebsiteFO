@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebsiteFO.Models;
+using MySql.Data;
 
 namespace WebsiteFO.Controllers
 {
