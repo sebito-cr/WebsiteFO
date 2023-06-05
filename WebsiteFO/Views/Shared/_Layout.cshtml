@@ -10,17 +10,22 @@
 
 <style>
 ul {
+  left: 10;
+  top: 0.5%;
+  width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 100%;
+  text-align: center;
+  display: inline-block;
+  list-style-type: none;
   background-color: #4F772D;
   position: fixed; /* Make it stick, even on scroll */
 }
 
 li a {
   display: block;
-  color: #000;
+  color: #1000;
   padding: 8px 16px;
   text-decoration: none;
 }
@@ -29,6 +34,16 @@ li a {
 li a:hover {
   background-color: #ECF39E;
   color: black;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
 }
 </style>
 
@@ -45,6 +60,9 @@ li a:hover {
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Home">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Films">Films</a>
                         </li>
                         <li class="nav-item">
@@ -53,6 +71,7 @@ li a:hover {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Location">Location</a>
                         </li>
+                        <input type="text" placeholder="Search..">
                     </ul>
                 </div>
             </div>
