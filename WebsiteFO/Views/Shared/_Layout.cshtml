@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/WebsiteFO.styles.css" asp-append-version="true" />
 
 <style>
-ul {
+.navbar-nav flex-grow-1 {
   left: 10;
   top: 0.5%;
   width: 100%;
@@ -20,6 +20,7 @@ ul {
   display: inline-block;
   list-style-type: none;
   background-color: #4F772D;
+  float: center;
   position: fixed; /* Make it stick, even on scroll */
 }
 
@@ -32,18 +33,22 @@ li a {
 
 /* Change the link color on hover */
 li a:hover {
-  background-color: #ECF39E;
+  background-color: #90A955;
   color: black;
 }
 
 /* Style the search box inside the navigation bar */
-.topnav input[type=text] {
+.navbar-loose {
   float: right;
   padding: 6px;
   border: none;
   margin-top: 8px;
   margin-right: 16px;
   font-size: 17px;
+
+li a:hover{
+ background-color: #000;
+    }
 }
 </style>
 
@@ -52,15 +57,14 @@ li a:hover {
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Maxis</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Home">Home</a>
+                        <li class ="logo">
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Maxis</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Films">Films</a>
@@ -71,7 +75,11 @@ li a:hover {
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Location">Location</a>
                         </li>
-                        <input type="text" placeholder="Search..">
+                    </ul>
+                    <ul class="navbar-loose">
+                        <li class ="searchbar">
+                            <input type="text" placeholder="Search..">
+                        </li>
                     </ul>
                 </div>
             </div>
