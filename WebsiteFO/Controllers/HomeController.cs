@@ -19,13 +19,23 @@ namespace WebsiteFO.Controllers
             return View();
         }
         [Route("Contact")]
-        [Route("Films")]
-        [Route("Location")]
+
+        [HttpPost]
         public IActionResult Contact()
         {
             return View();
         }
+        public IActionResult Contact(string voornaam, string achternaam)
+        {
+            ViewData["voornaam"] = voornaam;
+            ViewData["achternaam"] = achternaam;
 
+             return View();
+        }
+
+        [Route("Films")]
+        [Route("Location")]
+      
         public IActionResult Films()
         {
             return View();
