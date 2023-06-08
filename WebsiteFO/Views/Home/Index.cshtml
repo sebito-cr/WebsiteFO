@@ -7,10 +7,13 @@
 <head>
     <style>
         .container {
+            float: center;
             position: relative;
             width: 1000px;
             height: 500px;
+            top: 100px;
             overflow: hidden;
+            margin: 1000;
         }
 
         .image {
@@ -41,14 +44,18 @@
 
         .move-left {
             position: absolute;
-            top: 220px;
-            left: 900px;
+            top: 300px;
+            left: 950px;
+            background-color: #4F772D;
+            font-size: 30px;
         }
 
         .move-aside {
             position: absolute;
-            top: 220px;
-            left: 50px;
+            top: 300px;
+            left: 0px;
+            background-color: #4F772D;
+            font-size: 30px;
         }
 
         body{
@@ -56,7 +63,10 @@
              background-repeat: no-repeat;
              background-attachment: fixed;
              background-size: cover;
-          
+        }
+        
+        .text-center{
+            color: #90A955;
         }
         
     </style>
@@ -106,7 +116,4 @@
             image5.style.transform = 'translateX(-250px)';
         }
     </script>
-
-   
-
 </body>

@@ -19,12 +19,6 @@ namespace WebsiteFO.Controllers
             return View();
         }
         [Route("Contact")]
-
-        [HttpPost]
-        public IActionResult Contact()
-        {
-            return View();
-        }
         public IActionResult Contact(string voornaam, string achternaam)
         {
             ViewData["voornaam"] = voornaam;
@@ -35,7 +29,8 @@ namespace WebsiteFO.Controllers
 
         [Route("Films")]
         [Route("Location")]
-      
+       
+
         public IActionResult Films()
         {
             return View();
