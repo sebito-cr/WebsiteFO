@@ -41,11 +41,35 @@ namespace WebsiteFO.Controllers
             return View();
         }
 
+        [Route("Spiderman")]
         public IActionResult Spiderman()
         {
             return View();
         }
 
+        [Route("Transformers")]
+        public IActionResult Transformers()
+        {
+            return View();
+        }
+
+        [Route("Mario")]
+        public IActionResult Mario()
+        {
+            return View();
+        }
+
+        [Route("Guardians")]
+        public IActionResult Guardians()
+        {
+            return View();
+        }
+
+        [Route("FastX")]
+        public IActionResult FastX()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
