@@ -10,27 +10,23 @@
 
 <style>
 .navbar-nav {
-  left: 50px;
-  top: 0.5%;
   width: 100%;
   list-style-type: none;
   margin: 0;
   padding: 0;
   text-align: center;
-  display: inline-block;
   background-color: #4F772D;
-  position: fixed; /* Make it stick, even on scroll */
 }
 
 li a {
   display: block;
-  color: #1000;
+  color: black;
   padding: 8px 16px;
   text-decoration: none;
   font-family: "payrus", fantasy;
+  width: 25%;
 }
 
-/* Change the link color on hover */
 li :hover {
   background-color: #90A955;
   color: black;
@@ -45,17 +41,26 @@ li :hover {
   margin-right: 16px;
   font-size: 17px;
   list-style-type: none;
+  font-family: "payrus", fantasy;
+  color: black;
 }
 
-.films {
- display: block;
-  color: #1000;
+/*shit met films en dropdown button*/
+a[b-xgljg0g3f9] {
+    color: black;
+}
+
+.dropbtn {
+  display: block;
+  color: black;
   padding: 8px 16px;
   text-decoration: none;
+  font-family: "payrus", fantasy;
 }
 
 .films .dropbtn:hover {
-    background-color: #90A955;
+  background-color: #90A955;
+  color: black;
 }
 
 .films-content {
@@ -69,11 +74,13 @@ li :hover {
 
 .films-content a {
   float: none;
+  background-color: #31572C;
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
+  font-family: "payrus", fantasy;
 }
 
 .films-content a:hover {
@@ -83,7 +90,6 @@ li :hover {
 .films:hover .films-content {
   display: block;
 }
-
 </style>
 
 </head>
@@ -96,11 +102,11 @@ li :hover {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class ="logo">
+                    <ul class="navbar-nav flexgrow1">
+                        <li class="logo">
                             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Maxis</a>
                         </li>
-                        
+
                         <div class="films">
                             <a class="dropbtn">Films<i class="fa fa-caret-down"></i></a>
                             <div class="films-content">
@@ -109,21 +115,20 @@ li :hover {
                                 <a href="#">Movies</a>
                             </div>
                         </div>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
-                    </ul>      
+                    </ul>
                 </div>
-                   <ul class="navbar-loose">
+                <ul class="navbar-loose">
                     <li1 class="searchbar1">
-                       <input type="text" placeholder="Search..">
+                        <input type="text" placeholder="Search..">
                     </li1>
-                   </ul>
-                </div>
+                </ul>
             </div>
         </nav>
     </header>

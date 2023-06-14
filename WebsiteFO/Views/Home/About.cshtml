@@ -1,9 +1,14 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Our location:";
 }
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+</div>
 
-<h1>Our cinemas:</h1>
-<p1>Our socials:</p1>
+
+<div class="text-centro">
+    <h2>Our socials:</h2>
+</div>
 
 <html>
 <body>
@@ -15,29 +20,31 @@
 
     <div class="Insta">
         <a href="https://www.instagram.com/">
-            <img src="https://assets.ifttt.com/images/channels/28/icons/monochrome_large.png" width="250" height="250" alt="Example Image">
+            <img src="https://assets.ifttt.com/images/channels/28/icons/monochrome_large.png" width="220" height="220" alt="Example Image">
         </a>
     </div>
     <div class="Twitter">
         <a href="https://twitter.com/">
-            <img src="https://o.remove.bg/downloads/e9a4c163-b25e-4ee9-963a-15d7c4749bfc/488-4880349_white-twitter-logo-outline-hd-png-download-removebg-preview.png" width="250" height="250" alt="Example Image">
+            <img src="https://o.remove.bg/downloads/e9a4c163-b25e-4ee9-963a-15d7c4749bfc/488-4880349_white-twitter-logo-outline-hd-png-download-removebg-preview.png" width="220" height="220" alt="Example Image">
         </a>
     </div>
 </body>
 </html>
 
 <style>
-h1{
+.text-center{
     color: #90A955;
     position: fixed;
-    left: 27%;
+    left: 28%;
     top: 20%;
     font-family: "payrus", fantasy;
     font-size: 50px;
 }
-.p1{
+
+.text-centro{
     color: #90A955;
-    left: 70%;
+    position: fixed;
+    left: 66.5%;
     top: 20%;
     font-family: "payrus", fantasy;
     font-size: 50px;
@@ -50,13 +57,10 @@ body{
      background-size: cover;
 }
 
-.text{
-    color: white;
-}
-
 .location {
-    border: 5px solid #4F772D;
-    box-sizing: border-box;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #4F772D;
     position: fixed;
     left: 20%;
     top: 25%;
@@ -73,5 +77,4 @@ body{
     left: 65%;
     top: 47%;
 }
-
 </style>
