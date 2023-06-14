@@ -28,7 +28,7 @@ namespace WebsiteFO.Controllers
         }
 
         [Route("Films")]
-        [Route("Location")]
+        [Route("About")]
        
 
         public IActionResult Films()
@@ -36,7 +36,7 @@ namespace WebsiteFO.Controllers
             return View();
         }
 
-        public IActionResult Location()
+        public IActionResult About()
         {
             return View();
         }
