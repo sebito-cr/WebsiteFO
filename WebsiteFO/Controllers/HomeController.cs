@@ -71,6 +71,24 @@ namespace WebsiteFO.Controllers
             return View();
         }
 
+        [Route("Genres")]
+        public IActionResult Genres()
+        {
+            return View();
+        }
+
+        [Route("Versions")]
+        public IActionResult Versions()
+        {
+            return View();
+        }
+
+        [Route("Movies")]
+        public IActionResult Movies()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

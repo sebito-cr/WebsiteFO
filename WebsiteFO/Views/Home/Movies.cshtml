@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Movies";
+}
+
+<h1>Movies</h1>
+
+<h2>Now playing:</h2>
+
+<h3>Coming soon:</h3>
+
+<html>
+    <body>
+        <div class="Now">
+             <a asp-area="" asp-controller="Home" asp-action="Mario"><img class="image image3" src="https://assets-prd.ignimgs.com/2023/02/03/foevbcsayamvqpf-1675462826997.jpg" width="250" height="375"></a>
+             <a asp-area="" asp-controller="Home" asp-action="Guardians"><img class="image image4" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1676302257/amc-cdn/production/2/movies/62400/62358/PosterDynamic/149048.jpg" width="250" height="375"></a>
+             <a asp-area="" asp-controller="Home" asp-action="FastX"><img class="image image5" src="https://sportshub.cbsistatic.com/i/2023/03/14/50ac619e-265c-4ebe-90f1-696d4105b25e/fast-x-poster.jpg?auto=webp&width=3158&height=5000&crop=0.632:1,smart" width="250" height="375"></a>
+        </div>
+        
+        <div class="Soon">
+            <a asp-area="" asp-controller="Home" asp-action="Spiderman"><img class="image image1" src="https://www.comingsoon.net/wp-content/uploads/sites/3/2023/04/spider-man-across-the-spider-verse-poster.png?w=691" width="250" height="375"></a>
+            <a asp-area="" asp-controller="Home" asp-action="Transformers"><img class="image image2" src="https://www.newdvdreleasedates.com/images/posters/large/transformers-rise-of-the-beasts-2023-24.jpg" width="250" height="375"></a>
+        </div>
+</body>
+</html>
+
+
+<style>
+body{
+     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/701/676/desktop-wallpaper-theater-seats-black-and-white-%E2%9D%A4-for-theatre.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     color: #90A955;
+}
+
+h1{
+    color: #90A955;
+    font-family: "payrus", fantasy;
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    color: #90A955;
+    font-family: "payrus", fantasy;
+    font-size: 25px;
+    position: relative;
+    top: 70px;
+}
+
+h3{
+    color: #90A955;
+    font-family: "payrus", fantasy;
+    font-size: 25px;
+    position: relative;
+    top: 500px;
+}
+
+.Now{
+    position: relative;
+    top: 30px;
+}
+
+.Soon{
+    position: relative;
+    top: 123px;
+}
+
+</style>

@@ -75,6 +75,35 @@
             font-size: 100px;
         }
         
+
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4F772D; 
+            padding: 10px;
+            text-align: center;
+            font-family: "payrus", fantasy;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .cookie-banner button {
+            background-color: #90A955;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            font-family: "payrus", fantasy;
     </style>
 </head>
 <body>
@@ -120,6 +149,28 @@
             image3.style.transform = 'translateX(-250px)';
             image4.style.transform = 'translateX(-250px)';
             image5.style.transform = 'translateX(-250px)';
+        }
+    </script>
+
+    <div class="cookie-banner">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            // Set a cookie to remember user preference (e.g., using JavaScript document.cookie)
+            // You can customize this function to fit your specific requirements
+            document.cookie = "cookieConsent=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+
+            // Hide the cookie consent banner
+            document.querySelector('.cookie-banner').style.display = 'none';
+        }
+
+        // Check if the user has already accepted cookies
+        if (document.cookie.indexOf('cookieConsent=true') === -1) {
+            // Display the cookie consent banner if not already accepted
+            document.querySelector('.cookie-banner').style.display = 'block';
         }
     </script>
 </body>
