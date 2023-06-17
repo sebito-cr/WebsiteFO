@@ -1,0 +1,79 @@
+﻿<h1>Finalise your purchase</h1>
+
+<style>
+body{
+     background-image: url('https://e1.pxfuel.com/desktop-wallpaper/701/676/desktop-wallpaper-theater-seats-black-and-white-%E2%9D%A4-for-theatre.jpg');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+     color: #90A955;
+}
+
+h1{
+    color: #ECF39E;
+    font-family: "payrus", fantasy;
+    font-size: 50px;
+    text-align: center;
+}
+
+#purchase-btn{
+    position: relative;
+    top: 150px;
+    left: 580px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #90A955;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#purchase-btn:hover{
+    background-color: #ECF39E;
+    color: black;
+}
+
+#no-seats-selected{
+    color: #31572C;
+    position: relative;
+    top: 100px;
+    left: 530px;
+    font-size: 30px;
+    font-family: "payrus", fantasy;
+}
+</style>
+
+<html>
+<body>
+    <div id="selected-seats"></div>
+    <div id="no-seats-selected"></div>
+    <button id="purchase-btn" onclick="purchaseTickets()">Purchase</button>
+
+    <script>
+        function getSelectedSeats() {
+            var selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+            
+            if (selectedSeats && selectedSeats.length > 0) {
+                var seatList = selectedSeats.map(function (seat) {
+                    return "Row " + (seat.row + 1) + ", Seat " + (seat.col + 1);
+                }).join(", ");
+
+                document.getElementById("selected-seats").textContent = "Selected Seats: " + seatList;
+                document.getElementById("movie-info").textContent = "Movie: " + movie;
+                document.getElementById("time-info").textContent = "Time: " + time;
+            } else {
+                document.getElementById("no-seats-selected").textContent = "No seats selected.";
+            }
+        }
+
+        function purchaseTickets() {
+            alert("Tickets purchased successfully!");
+        }
+
+        getSelectedSeats();
+
+    </script>
+</body>
+</html>

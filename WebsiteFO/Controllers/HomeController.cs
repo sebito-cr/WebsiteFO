@@ -119,6 +119,12 @@ namespace WebsiteFO.Controllers
             return View();
         }
 
+        [Route("Purchase")]
+        public IActionResult Purchase()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

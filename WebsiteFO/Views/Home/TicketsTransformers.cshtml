@@ -14,9 +14,120 @@ body{
 }
 
 h1{
-    color: #90A955;
+    color: #ECF39E;
     font-family: "payrus", fantasy;
     font-size: 50px;
     text-align: center;
 }
+.seat {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #31572C;
+      margin: 5px;
+      text-align: center;
+      line-height: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+.selected {
+    background-color: #ECF39E;
+    cursor: not-allowed;
+}
+
+.button{
+    position: relative;
+    top: 150px;
+    left: 550px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #90A955;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ECF39E;
+    color: black;
+}
+
+ #screen {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 30px;
+}
+
+#seat-map{
+    position: relative;
+    top: 50px;
+    left: 370px;
+}
 </style>
+
+<html>
+    <body>
+<div id="seat-map">
+    <!-- Seats will be dynamically generated here -->
+</div>
+<a class="button" asp-area="" asp-controller="Home" asp-action="Purchase">Choose selected seats</a>
+
+ <div id="screen">Screen</div>
+
+<script>
+    var rows = 10;
+    var cols = 14;
+    var seats = [];
+
+    // Create seats and add event listeners
+    for (var i = 0; i < rows; i++) {
+      seats[i] = [];
+      var seatRow = document.createElement("div");
+      seatRow.className = "seat-row";
+      for (var j = 0; j < cols; j++) {
+        var seatNumber = i * cols + j + 1;
+        seats[i][j] = { row: i, col: j, selected: false };
+        var seatDiv = document.createElement("div");
+        seatDiv.className = "seat";
+        seatDiv.setAttribute("data-row", i);
+        seatDiv.setAttribute("data-col", j);
+        seatDiv.innerText = seatNumber;
+        seatDiv.onclick = toggleSeat;
+        seatRow.appendChild(seatDiv);
+      }
+      document.getElementById("seat-map").appendChild(seatRow);
+    }
+
+    // Toggle seat selection
+    function toggleSeat() {
+      var row = parseInt(this.getAttribute("data-row"));
+      var col = parseInt(this.getAttribute("data-col"));
+      seats[row][col].selected = !seats[row][col].selected;
+      this.classList.toggle("selected");
+    }
+
+    // Get selected seats
+    function getSelectedSeats() {
+      var selectedSeats = [];
+      for (var i = 0; i < rows; i++) {
+        for (var j = 0; j < cols; j++) {
+          if (seats[i][j].selected) {
+            selectedSeats.push({ row: i, col: j });
+          }
+        }
+      }
+
+// Store selected seats in localStorage
+localStorage.setItem("selectedSeats", JSON.stringify(selectedSeats));
+            
+console.log(selectedSeats);
+// You can perform further operations with the selected seats here
+    }
+  </script>
+</body>
+</html>
