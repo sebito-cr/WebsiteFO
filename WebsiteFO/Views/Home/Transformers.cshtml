@@ -1,8 +1,23 @@
-﻿@{
-    ViewData["Title"] = "Transformers";
-}
+﻿<h1>Spider-man across the spider-verse</h1>
+<p class="p1"> Action | 127 minuten</p>
+<p class="p2">
+    Optimus Prime and the Autobots take on their biggest challenge yet.<br>When a new threat capable of destroying the entire planet emerges,<br>they must team up with a powerful faction of Transformers<br>
+    <span> known as the Maximals to save Earth.</span>
+</p>
 
-<h1>Transformers rise of the beasts</h1>
+<html>       
+    <body>
+        <div class="robots">
+        <img src="https://www.newdvdreleasedates.com/images/posters/large/transformers-rise-of-the-beasts-2023-24.jpg" width="345" height="525">
+        </div>
+        
+        <div class="kijkwijzer">
+        <img src="https://o.remove.bg/downloads/44293264-3b0b-4a0d-b2dd-6283e5c2ab16/download-removebg-preview.png" width="40" height="40">
+        </div>
+
+        <a class="button" asp-area="" asp-controller="Home" asp-action="TicketsTransformers">Buy tickets</a>        
+    </body>
+</html>
 
 <style>
 body{
@@ -10,10 +25,73 @@ body{
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
-     color: #90A955;
 }
 
 h1{
-    color: #90A955;
+    color: #ECF39E;
+    position: relative;
+    top: 180px;
+    left: 965px;
+    font-size: 35px;
+    font-family:"payrus", fantasy;
+}
+
+.p1 {
+  color: #90A955;
+  position: absolute;
+  top: 320px;
+  left: 1650px;
+  font-size: 22px;
+}
+
+.p2 {
+  color: white;
+  position: absolute;
+  top: 360px;
+  left: 1600px;
+  font-size: 20px;
+}
+
+.p2 span {
+  display: block;
+}
+
+.robots{
+    padding: 0;
+    position: relative;
+    top: 130px;
+    left: 610px;
+}
+
+.kijkwijzer{
+    position: relative;
+    top: -340px;
+    left: 965px;
+}
+
+.button {
+      position: relative;
+      top: -213px;
+      left: 965px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #90A955;
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ECF39E;
+    color: black;
+}
+
+.video{
+  width: 750px;
+  height: 525px;
 }
 </style>
+
+

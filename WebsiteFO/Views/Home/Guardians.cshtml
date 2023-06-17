@@ -1,8 +1,25 @@
-﻿@{
-    ViewData["Title"] = "Guardians";
-}
+﻿<h1>Guardians of the Galaxy Vol. 3</h1>
+<p class="p1">Comedy | Action | 149 minuten</p>
+<p class="p2">
+    Still reeling from the loss of Gamora, Peter Quill must rally<br> 
+    his team to defend the universe and protect one of their own.<span>If the mission is not completely successful, it could possibly<br> 
+    lead to the end of the Guardians as we know them.</span>
+   
+</p>
 
-<h1>Guardians of the Galaxy</h1>
+<html>       
+    <body>
+        <div class="galaxy">
+        <img src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1676302257/amc-cdn/production/2/movies/62400/62358/PosterDynamic/149048.jpg" width="345" height="525">
+        </div>
+        
+        <div class="kijkwijzer2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Kijkwijzer_12.svg/1024px-Kijkwijzer_12.svg.png" width="40" height="40">
+        </div>
+
+        <a class="button" asp-area="" asp-controller="Home" asp-action="TicketsGuardians">Buy tickets</a>        
+    </body>
+</html>
 
 <style>
 body{
@@ -10,10 +27,66 @@ body{
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
-     color: #90A955;
 }
 
 h1{
-    color: #90A955;
+    color: #ECF39E;
+    position: relative;
+    top: 180px;
+    left: 965px;
+    font-size: 35px;
+    font-family:"payrus", fantasy;
+}
+
+.p1 {
+  color: #90A955;
+  position: absolute;
+  top: 320px;
+  left: 1650px;
+  font-size: 22px;
+}
+
+.p2 {
+  color: white;
+  position: absolute;
+  top: 360px;
+  left: 1600px;
+  font-size: 20px;
+}
+
+.p2 span {
+  display: block;
+}
+
+.galaxy{
+    padding: 0;
+    position: relative;
+    top: 130px;
+    left: 610px;
+}
+
+.kijkwijzer2{
+    position: relative;
+    top: -340px;
+    left: 965px;
+}
+
+.button {
+      position: relative;
+      top: -215px;
+      left: 965px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #90A955;
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ECF39E;
+    color: black;
 }
 </style>

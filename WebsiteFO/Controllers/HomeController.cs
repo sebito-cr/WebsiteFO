@@ -89,6 +89,36 @@ namespace WebsiteFO.Controllers
             return View();
         }
 
+        [Route("TicketsSpiderman")]
+        public IActionResult TicketsSpiderman()
+        {
+            return View();
+        }
+       
+        [Route("TicketsGuardians")]
+        public IActionResult TicketsGuardians()
+        {
+            return View();
+        }
+
+        [Route("TicketsFastX")]
+        public IActionResult TicketsFastX()
+        {
+            return View();
+        }
+
+        [Route("TicketsMario")]
+        public IActionResult TicketsMario()
+        {
+            return View();
+        }
+
+        [Route("TicketsTransformers")]
+        public IActionResult TicketsTransformers()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

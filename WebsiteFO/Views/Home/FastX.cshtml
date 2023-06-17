@@ -1,8 +1,23 @@
-﻿@{
-    ViewData["Title"] = "FastX";
-}
+﻿<h1>FastX</h1>
+<p class="p1">Comedy | Action | 141 minuten</p>
+<p class="p2">
+    Over many missions and against impossible odds,<br> Dom Toretto and his family have outsmarted and outdriven every foe in their path.<br>Now, they must confront the most lethal opponent they've ever faced.<br> Fueled by revenge, a terrifying threat emerges from the shadows
+               <span>of the past to shatter Dom's world and destroy everything -- and everyone -- he loves.</span>
+</p>
 
-<h1>FastX</h1>
+<html>       
+    <body>
+        <div class="Fast">
+        <img src="https://sportshub.cbsistatic.com/i/2023/03/14/50ac619e-265c-4ebe-90f1-696d4105b25e/fast-x-poster.jpg?auto=webp&width=3158&height=5000&crop=0.632:1,smart" width="345" height="525">
+        </div>
+        
+        <div class="kijkwijzer3">
+        <img src="https://o.remove.bg/downloads/44293264-3b0b-4a0d-b2dd-6283e5c2ab16/download-removebg-preview.png" width="40" height="40">
+        </div>
+
+        <a class="button" asp-area="" asp-controller="Home" asp-action="TicketsFastX">Buy tickets</a>        
+    </body>
+</html>
 
 <style>
 body{
@@ -10,10 +25,73 @@ body{
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
-     color: #90A955;
 }
 
 h1{
-    color: #90A955;
+    color: #ECF39E;
+    position: relative;
+    top: 180px;
+    left: 965px;
+    font-size: 35px;
+    font-family:"payrus", fantasy;
+}
+
+.p1 {
+  color: #90A955;
+  position: absolute;
+  top: 320px;
+  left: 1650px;
+  font-size: 22px;
+}
+
+.p2 {
+  color: white;
+  position: absolute;
+  top: 360px;
+  left: 1600px;
+  font-size: 20px;
+}
+
+.p2 span {
+  display: block;
+}
+
+.Fast{
+    padding: 0;
+    position: relative;
+    top: 130px;
+    left: 610px;
+}
+
+.kijkwijzer3{
+    position: relative;
+    top: -340px;
+    left: 965px;
+}
+
+.button {
+      position: relative;
+      top: -180px;
+      left: 965px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #90A955;
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ECF39E;
+    color: black;
+}
+
+.video{
+  width: 750px;
+  height: 525px;
 }
 </style>
+
+

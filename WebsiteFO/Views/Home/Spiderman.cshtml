@@ -1,8 +1,23 @@
-﻿@{
-    ViewData["Title"] = "Spiderman";
-}
+﻿
+<h1>Spider-man across the spider-verse</h1>
+<p class="p1">Kids | Action | 143 minuten</p>
+<p class="p2"> Miles Morales returns in the next part of the Oscar®-winning Spider-Verse saga.<br>
+               <span>This spectacular adventure leads Brooklyn's friendly Spider-Man across the multiverse.</span>
+</p>
 
-<h1>Spiderman across the spider-verse</h1>
+<html>       
+    <body>
+        <div class="spiderverse">
+        <img src="https://www.comingsoon.net/wp-content/uploads/sites/3/2023/04/spider-man-across-the-spider-verse-poster.png?w=691" width="345" height="525">
+        </div>
+        
+        <div class="kijkwijzer">
+        <img src="https://o.remove.bg/downloads/44293264-3b0b-4a0d-b2dd-6283e5c2ab16/download-removebg-preview.png" width="40" height="40">
+        </div>
+
+        <a class="button" asp-area="" asp-controller="Home" asp-action="TicketsSpiderman">Buy tickets</a>        
+    </body>
+</html>
 
 <style>
 body{
@@ -10,10 +25,68 @@ body{
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: cover;
-     color: #90A955;
 }
 
 h1{
-    color: #90A955;
+    color: #ECF39E;
+    position: relative;
+    top: 180px;
+    left: 965px;
+    font-size: 35px;
+    font-family:"payrus", fantasy;
+}
+
+.p1 {
+  color: #90A955;
+  position: absolute;
+  top: 320px;
+  left: 1650px;
+  font-size: 22px;
+}
+
+.p2 {
+  color: white;
+  position: absolute;
+  top: 360px;
+  left: 1600px;
+  font-size: 20px;
+}
+
+.p2 span {
+  display: block;
+}
+
+.spiderverse{
+    padding: 0;
+    position: relative;
+    top: 130px;
+    left: 610px;
+}
+
+.kijkwijzer{
+    position: relative;
+    top: -340px;
+    left: 965px;
+}
+
+.button {
+      position: relative;
+      top: -267px;
+      left: 965px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #90A955;
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ECF39E;
+    color: black;
 }
 </style>
+
+
