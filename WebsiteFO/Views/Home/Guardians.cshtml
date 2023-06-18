@@ -17,7 +17,11 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Kijkwijzer_12.svg/1024px-Kijkwijzer_12.svg.png" width="40" height="40">
         </div>
 
-        <a class="button" asp-area="" asp-controller="Home" asp-action="TicketsGuardians">Buy tickets</a>        
+        <a class="button" asp-area="" asp-controller="Home" asp-action="TicketsGuardians">Buy tickets</a>
+
+    <div class="trailer">
+        <iframe width="1080" height="700" src="https://www.youtube.com/embed/u3V5KDHRQvk" title="Marvel Studios’ Guardians of the Galaxy Vol. 3 | Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
     </body>
 </html>
 
@@ -88,5 +92,11 @@ h1{
 .button:hover{
     background-color: #ECF39E;
     color: black;
+}
+
+.trailer{
+    position: relative;
+    top: -560px;
+    left: -570px;
 }
 </style>
