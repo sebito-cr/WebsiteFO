@@ -18,20 +18,26 @@ namespace WebsiteFO.Controllers
         {
             return View();
         }
-        [Route("Contact")]
 
+        [Route("Contact")]
         public IActionResult Contact()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Contact(string firstName, string lastName)
+        public IActionResult Contact(Person person)
         {
-            ViewData["firstName"] = firstName;
-            ViewData["lastName"] = lastName;
+            if (ModelState.IsValid)
+                return Redirect("/succces");
+            
+            return View(person);
+        }
 
-             return View();
+        [Route("succes")]
+        public IActionResult Succes()
+        {
+            return View();
         }
 
         [Route("Films")]

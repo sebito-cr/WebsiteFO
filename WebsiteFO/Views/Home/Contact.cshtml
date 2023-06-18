@@ -1,17 +1,38 @@
-﻿
+﻿@model WebsiteFO.Models.Person
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>How can we help you today?</h1>
 
-<form method="post">
-    Firstname: <input type="text" name="firstname" />
-    Lastname: <input type="text" name="lastname" />
-    <input type="submit" value="send" />
-</form>
 
-<p>Yo cool name! @ViewData["firstname"] @ViewData["lastname"]!</p>
+<form method="post" class="contactform">
+    <div class="form-group">
+        @Html.LabelFor(m => m.Firstname)
+        @Html.TextBoxFor(m => m.Firstname)
+        @Html.ValidationMessageFor(m => m.Firstname)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Lastname)
+        @Html.TextBoxFor(m => m.Lastname)
+        @Html.ValidationMessageFor(m => m.Lastname)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.ValidationMessageFor(m => m.Email)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextBoxFor(m => m.Description)
+        @Html.ValidationMessageFor(m => m.Description)
+    </div>
+
+    <input class="button" type="submit" value="send" />
+</form>
 
 <style>
 body{
@@ -26,5 +47,38 @@ h1{
     color: #90A955;
     font-family: "payrus", fantasy;
     font-size: 50px;
+    position: relative;
+    left: 30%;
+}
+
+.contactform{
+    position: relative;
+    left: 40%;
+    top: 30%;
+    font-size: 20px;
+}
+
+#TextBoxFor{
+    position: relative;
+    left: 66px;
+}
+
+.button{
+    position: relative;
+    top: 50px;
+    left: 10%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #90A955;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ECF39E;
+    color: black;
 }
 </style>
