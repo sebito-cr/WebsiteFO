@@ -67,6 +67,7 @@
              background-attachment: fixed;
              background-size: cover;
              color: black;
+             overflow: hidden;
         }
         
         .text-center{
@@ -160,17 +161,18 @@
 
     <script>
         function acceptCookies() {
-            // Set a cookie to remember user preference (e.g., using JavaScript document.cookie)
-            // You can customize this function to fit your specific requirements
-            document.cookie = "cookieConsent=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
+            // Set a cookie to remember user preference for 1 day (86400000 milliseconds)
+            var expiryDate = new Date();
+            expiryDate.setTime(expiryDate.getTime() + 86400000); // 1 day
+            document.cookie = "cookieConsent=true; expires=" + expiryDate.toUTCString() + "; path=/";
 
             // Hide the cookie consent banner
             document.querySelector('.cookie-banner').style.display = 'none';
         }
 
-        // Check if the user has already accepted cookies
-        if (document.cookie.indexOf('cookieConsent=true') === -1) {
-            // Display the cookie consent banner if not already accepted
+        // Check if the user has already accepted cookies or if the referrer is the same page
+        if (document.cookie.indexOf('cookieConsent=true') === -1 && document.referrer !== window.location.href) {
+            // Display the cookie consent banner if not already accepted and not returning from the same page
             document.querySelector('.cookie-banner').style.display = 'block';
         }
     </script>
